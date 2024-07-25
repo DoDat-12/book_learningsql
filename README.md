@@ -1,10 +1,12 @@
-# Chapter 2. Creating and Populating a Database
+# Learning SQL from Learning SQL - Generate, Manipulate, and Retrieve Data by Alan Beaulieu
 
-## Creating a MySQL Database
+## Chapter 2. Creating and Populating a Database
+
+### Creating a MySQL Database
 
 Run `.sql` file from `sakila-db` server
 
-## Using the mysql Command-Line Tool
+### Using the mysql Command-Line Tool
 
 1. Logging in from Windows shell
     ```
@@ -26,9 +28,9 @@ Run `.sql` file from `sakila-db` server
    mysql> \! cls
    ```
 
-## MySQL Data Types
+### MySQL Data Types
 
-### Character Data
+#### Character Data
 
     char(20)    /* fixed-length */
     varchar(20) /* variable-length */
@@ -41,9 +43,9 @@ Run `.sql` file from `sakila-db` server
 
 - `longtext` - 4294967295 bytes
 
-### Numeric Data
+#### Numeric Data
 
-#### MySQL integer types
+##### MySQL integer types
 
 - `tinyint` - -128 to 127
 
@@ -55,7 +57,7 @@ Run `.sql` file from `sakila-db` server
 
 - `bigint` - -2^63 to 2^63 - 1
 
-#### MySQL floating-point types
+##### MySQL floating-point types
 
 - `float(p, s)` and `double(p, s)`
 
@@ -64,7 +66,7 @@ Run `.sql` file from `sakila-db` server
 > 17.8675 would be rounded to 17.87, and attempting to store the number 178.375 in your float(4,2) column would generate
 > an error.
 
-### Temporal Data
+#### Temporal Data
 
 - `date` - YYYY-MM-DD
 
@@ -92,9 +94,9 @@ Run `.sql` file from `sakila-db` server
   one for the task start date/time and the other for the task completion date/time) and subtracting one from the other,
   but it is simpler to use a single time column.
 
-## Table Creation
+### Table Creation
 
-### SQL Schema Statements
+#### SQL Schema Statements
 
 1. Person Table
    ```
@@ -127,18 +129,18 @@ Run `.sql` file from `sakila-db` server
    );
    ```
 
-## Population and Modifying Tables
+### Population and Modifying Tables
 
-### Inserting Data
+#### Inserting Data
 
-#### Generating Numeric Key Data
+##### Generating Numeric Key Data
 
    ```
    ALTER TABLE person
    MODIFY person_id SMALLINT UNSIGNED AUTO_INCREMENT;
    ```
 
-#### The INSERT Statement
+##### The INSERT Statement
 
    ```
    INSERT INTO person
@@ -149,7 +151,7 @@ Run `.sql` file from `sakila-db` server
    VALUES (1, 'pizza');
    ```
 
-### Updating Data
+#### Updating Data
 
    ```
    UPDATE person
@@ -184,14 +186,14 @@ Run `.sql` file from `sakila-db` server
 - `%w` The numeric day of the week (0=Sunday..6=Saturday)
 - `%Y` The four-digit year
 
-### Delete Data
+#### Delete Data
 
    ```
    DELETE FROM person
    WHERE person_id = 2;
    ```
 
-## The Sakila Database
+### The Sakila Database
 
 ![sakila_database.png](sakila-db/sakila_database.png)
 
@@ -215,11 +217,11 @@ Run `.sql` file from `sakila-db` server
         CONSTRAINT fk_customer_store FOREIGN KEY (store_id) REFERENCES store (store_id) ON DELETE RESTRICT ON UPDATE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-# Chapter 3. Query Primer
+## Chapter 3. Query Primer
 
-## Query Mechanics
+### Query Mechanics
 
-## Query Clauses
+### Query Clauses
 
 - `select` - Determines which columns to include in the query's result set
 - `from` - Identifies the tables from which to retrieve data and how the tables should be joined
@@ -228,7 +230,7 @@ Run `.sql` file from `sakila-db` server
 - `having` - Filters out unwanted groups
 - `order by` - Sorts the rows of the final result set by one or more columns
 
-## The SELECT Clause
+### The SELECT Clause
 
 One of the last clauses that the database server evaluates. The SELECT clause determines which of all possible columns
 should be included in the query's result set
@@ -251,21 +253,21 @@ Include things in SELECT clause:
     FROM language;  
     ```
 
-### Column Aliases
+#### Column Aliases
 
 From previous: `upper(name) language_name`, `language_name` is column alias
 
 Option: Using `as` before the alias name: `SELECT language_id * 3.1415927 AS lang_pi_value`
 
-### Removing Duplicates
+#### Removing Duplicates
 
     SELECT DISTINCT actor_id FROM film_actor ORDER BY actor_id
 
-## The FROM Clause
+### The FROM Clause
 
 The `FROM` clause defines the tables used by a query, along with the means of linking the tables together
 
-### Tables
+#### Tables
 
 Four different types of tables:
 
@@ -315,7 +317,7 @@ Four different types of tables:
     --When the view is created, no additional data is generated or stored--
     ```
 
-### Table Links
+#### Table Links
 
     SELECT customer.first_name, customer.last_name, time(rental.rental_date) rental_time
     FROM customer
@@ -323,7 +325,7 @@ Four different types of tables:
         ON customer.customer_id = rental.customer_id
     WHERE date(rental.rental_date) = '2005-06-14';
 
-### Defining Table Aliases
+#### Defining Table Aliases
 
     SELECT c.first_name, c.last_name, 
         time(r.rental_date) rental_time
@@ -332,7 +334,7 @@ Four different types of tables:
         ON c.customer_id = r.customer_id
     WHERE date(r.dental_date) = '2005-06-14';
 
-## The WHERE Clause
+### The WHERE Clause
 The `WHERE` clause is the mechanism for filtering out unwanted rows for your result set.
     
     SELECT title 
@@ -340,4 +342,4 @@ The `WHERE` clause is the mechanism for filtering out unwanted rows for your res
     WHERE rating = 'G' AND rental_duration >= 7;
     --Individual conditions are separated using operators such as AND, OR, NOT--
 
-## The GROUP BY and HAVING Clauses
+### The GROUP BY and HAVING Clauses
