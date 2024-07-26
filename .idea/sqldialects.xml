@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/chapter_03/ex_01.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/chapter_03/ex_02.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/chapter_03/ex_03.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/chapter_03/ex_04.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/sakila-db/sakila-schema.sql" dialect="MySQL" />
   </component>
 </project>
