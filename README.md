@@ -6,3 +6,4 @@
 
 ## Chapter 3 - Query Primer
 
+## Chapter 4 - Filtering
