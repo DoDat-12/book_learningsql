@@ -7,3 +7,11 @@
 ## Chapter 3 - Query Primer
 
 ## Chapter 4 - Filtering
+
+## Chapter 5 - Querying Multiple Tables
+
+## Chapter 6 - Working with Sets
+
+## Chapter 7 - Data Generation, Manipulation, and Conversion
+
+## Chapter 8 - Grouping and Aggregates
