@@ -35,7 +35,7 @@ Run `.sql` file from `sakila-db` server
 
 - `tinytext` - 255 bytes
 
-- `text` - 65535 bytes
+- `text` - 65535 bytes (`clob` in _Oracle Database_)
 
 - `mediumtext` - 16777215 bytes
 
