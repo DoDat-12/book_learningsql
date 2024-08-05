@@ -25,6 +25,11 @@
     <file url="file://$PROJECT_DIR$/chapter_10/ex_03.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/chapter_11/ex_01.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/chapter_11/ex_02.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/chapter_12/ex_01.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/chapter_13/ex_01.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/chapter_14/ex_01.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/chapter_14/ex_02.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/chapter_15/ex_01.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/sakila-db/sakila-schema.sql" dialect="MySQL" />
     <file url="PROJECT" dialect="MySQL" />
   </component>

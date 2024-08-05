@@ -23,3 +23,13 @@
 - Chapter 11. Conditional Logic
 
 - Chapter 12. Transactions
+
+- Chapter 13. Indexes and Constraints
+
+- Chapter 14. Views
+
+- Chapter 15. Metadata
+
+- Chapter 16. Analytic Functions
+
+- Chapter 17. Working with Large Databases

@@ -1,4 +1,4 @@
-# Chapter 13. Indexed and Constraints
+# Chapter 13. Indexes and Constraints
 
 ## Indexes
 
