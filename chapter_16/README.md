@@ -1,4 +1,2 @@
-# Chapter 16. Analytic Functions
-
-## Analytic Function Concepts
+# Chapter 16. Analytic Functions (Temp Skip)
 
