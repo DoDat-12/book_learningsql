@@ -30,6 +30,8 @@
 
 - Chapter 15. Metadata
 
-- Chapter 16. Analytic Functions
+- Chapter 16. Analytic Functions (Skipping)
 
 - Chapter 17. Working with Large Databases
+
+- Chapter 18. SQL and Big Data
